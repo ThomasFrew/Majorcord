@@ -1,5 +1,5 @@
 # Contributing Guidelines
-Thank you for taking the time to contrbiute to Majorcord! Please follow these simple guidelines to ensure your contribution is helpful and loved by all. Before doing anything, check out Majorcord's [Code of Coduct](https://github.com/ThomasFrew/Majorcord/blob/master/CODE_OF_CONDUCT.md) to ensure everyone is happy.
+Thank you for taking the time to contrbiute to Majorcord! Please follow these simple guidelines to ensure your contribution is helpful and loved by all. Before doing anything, check out Majorcord's [Code of Conduct](https://github.com/ThomasFrew/Majorcord/blob/master/CODE_OF_CONDUCT.md) to ensure everyone is happy.
 
 ## Found a bug or though of a new feature?
 * Ensure that nobody else has done the same by checking out Majorcord's [Issues](https://github.com/ThomasFrew/Majorcord/issues) page.
@@ -14,4 +14,4 @@ Thank you for taking the time to contrbiute to Majorcord! Please follow these si
 
 ## Looking to fix a cosmetic feature?
 * Go ahead! We all have a little to learn though: ensure you explain your decision when you create a Pull Request and give advice for future improvements!
-* Try to do all cosmetic adjustments in one fell swoop: too many clutter the [history](https://github.com/ThomasFrew/Majorcord/network) of otherwise useful branches.
+* Try to do all cosmetic adjustments in one fell swoop: too many clutter the [history](https://github.com/ThomasFrew/Majorcord/network) of of the network: obscuring otherwise userful branches.

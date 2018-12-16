@@ -1,7 +1,0 @@
-{
-  "os": "windows",
-  "dist": "trusty",
-  "group": "stable",
-  ".result": "configured",
-  "language": "python"
-}

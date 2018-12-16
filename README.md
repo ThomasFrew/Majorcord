@@ -34,10 +34,14 @@ enter_username_widgets = ["username_entry", "username_button"]
 ```
 
 ### Console
-Majorcord also utilises Python's console to display lines of text too great in number to be diplayed in the interface.However, Majorcord may later be developed to no longer rely on this console.
+Majorcord also utilises Python's console to display lines of text too great in number to be diplayed in the interface. However, Majorcord may later be developed to no longer rely on this console.
 
-## Contributing 
-*Contribution documents have not been developed yet. Sorry about that!*
+## Guidelines 
+Ensure you check out our various guidelines before contributing to Majorcord:
+* (Code of Conduct)[https://github.com/ThomasFrew/Majorcord/blob/master/CODE_OF_CONDUCT.md]
+* (Contributing Guidelines)[https://github.com/ThomasFrew/Majorcord/blob/master/CONTRIBUTING.md]
+* (Issue Templates)[https://github.com/ThomasFrew/Majorcord/tree/master/.github/ISSUE_TEMPLATE]
+* (Pull Request Template)[https://github.com/ThomasFrew/Majorcord/blob/master/PULL_REQUEST_TEMPLATE.md]
 
 ## Versioning
 Musicord is currently at Version 1.0.0 (v1.0.0). See [Semantic Versioning](https://semver.org/) if you do not understand what this means.

@@ -44,21 +44,23 @@ chosen_server_attributes = "undefined"
 #Creates Tkinter window
 window = Tk()
 window.title("Majorcord")
+window.resizable(0,0)
 
 #Creates widgets
-status = Label(font = ("georgia", 15, "italic"))
+status = Label()
+logo = Label()
 
-server_1_button = Button(text = "Server 1 (G♯)", relief = "groove")
-server_2_button = Button(text = "Server 2 (C♮)", relief = "groove")
-server_3_button = Button(text = "Server 3 (E♭)", relief = "groove")
-server_4_button = Button(text = "Server 4 (B♭)", relief = "groove")
-license_button = Button(text = "License", relief = "groove" )
+server_1_button = Button(text = "Server 1 (G♯)")
+server_2_button = Button(text = "Server 2 (C♮)")
+server_3_button = Button(text = "Server 3 (E♭)")
+server_4_button = Button(text = "Server 4 (B♭)")
+license_button = Button(text = "Lisence")
 
-username_entry = Entry(textvariable = username, relief = "groove", width = 60)
-username_button = Button(text = "Enter", relief = "groove")
+username_entry = Entry(textvariable = username)
+username_button = Button(text = "Enter")
 
-message_entry = Entry(textvariable = message, relief = "groove", width = 60)
-message_button = Button(text = "Send", relief = "groove")
+message_entry = Entry(textvariable = message)
+message_button = Button(text = "Send")
 
 #Creates menubar and sub-menus
 menu_bar = Menu(window)
@@ -82,13 +84,15 @@ window.config(menu = menu_bar)
 #Displays a variety of servers and requests one
 def request_server():
     status.configure( text = "Welcome to Majorcord! Please select a server." )
-    status.grid( row = 1, column = 1, columnspan = 5, padx = 5, pady = 5 )
+    status.grid(row = 1, column = 2, columnspan = 6, padx = 5, pady = 5)
+    logo.configure( text = "Maj.")
+    logo.grid(row = 1, column = 1, rowspan = 2, padx = 5, pady = 5)
     
-    server_1_button.grid(row = 2, column = 1, padx = 5, pady = 5)
-    server_2_button.grid(row = 2, column = 2, padx = 5, pady = 5)
-    server_3_button.grid(row = 2, column = 3, padx = 5, pady = 5)
-    server_4_button.grid(row = 2, column = 4, padx = 5, pady = 5)
-    license_button.grid(row = 2, column = 5, padx = 5, pady = 5)
+    server_1_button.grid(row = 2, column = 2, padx = 5, pady = 5)
+    server_2_button.grid(row = 2, column = 3, padx = 5, pady = 5)
+    server_3_button.grid(row = 2, column = 4, padx = 5, pady = 5)
+    server_4_button.grid(row = 2, column = 5, padx = 5, pady = 5)
+    license_button.grid(row = 2, column = 6, padx = 5, pady = 5)
 
     for i in enter_username_widgets:
         eval(i).grid_forget()
@@ -136,9 +140,9 @@ def open_license():
 
 #Requests username
 def request_username():
-    status.configure(text = "I N T E R E S T I N G. Please enter a username.")
-    username_entry.grid(row = 2, column = 3, padx = 5, pady = 5)
-    username_button.grid(row = 2, column = 4, padx = 5, pady = 5)
+    status.configure(text = "I n t e r e s t i n g. Please enter a username.")
+    username_entry.grid(row = 2, column = 4, padx = 5, pady = 5)
+    username_button.grid(row = 2, column = 5, padx = 5, pady = 5)
     
     for i in request_server_widgets:
         eval(i).grid_forget()
@@ -181,8 +185,8 @@ def write_messages():
     for i in lines:
         print(i)
 
-    message_entry.grid( row = 2, column = 3, padx = 5, pady = 5 )
-    message_button.grid( row = 2, column = 4, padx = 5, pady = 5 )
+    message_entry.grid( row = 2, column = 4, padx = 5, pady = 5 )
+    message_button.grid( row = 2, column = 5, padx = 5, pady = 5 )
     
     for i in request_server_widgets:
         eval(i).grid_forget()
@@ -270,6 +274,25 @@ update_menu.entryconfigure("Past 15 Messages", command = update_15)
 menu_bar.entryconfigure("Quit", command = window.destroy)
 
 window.config(menu = menu_bar)
+
+#Configures style of window (like a CSS document for Python!)
+window.configure(bg = "#492B1C")
+status.configure(bg = "#492B1C", fg = "#FFFDFC", font = ("georgia", 15, "bold italic"))
+logo.configure(bg = "#492B1C", fg = "#FFFDFC", font = ("georgia", 40, "bold italic"))
+
+server_1_button.configure(fg = "#070700", bg = "#FFFDFC", relief = "ridge", font = ("courier new", 9))
+server_2_button.configure(fg = "#070700", bg = "#FFFDFC", relief = "ridge", font = ("courier new", 9))
+server_3_button.configure(fg = "#070700", bg = "#FFFDFC", relief = "ridge", font = ("courier new", 9))
+server_4_button.configure(fg = "#070700", bg = "#FFFDFC", relief = "ridge", font = ("courier new", 9))
+license_button.configure(fg = "#070700", bg = "#FFFDFC", relief = "ridge", font = ("courier new", 9))
+username_button.configure(fg = "#070700", bg = "#FFFDFC", relief = "ridge", font = ("courier new", 9))
+message_button.configure(fg = "#070700", bg = "#FFFDFC", relief = "ridge", font = ("courier new", 9))
+
+username_entry.configure(fg = "#070700", bg = "#FFFDFC", relief = "sunken", width = 60, font = ("courier new", 9))
+username_button.config(fg = "#070700", bg = "#FFFDFC", relief = "ridge", font = ("courier new", 9))
+
+message_entry.configure(fg = "#070700", bg = "#FFFDFC", relief = "sunken", width = 60, font = ("courier new", 9))
+message_button.config(fg = "#070700", bg = "#FFFDFC", relief = "ridge", font = ("courier new", 9))
 
 
 #Begins the process

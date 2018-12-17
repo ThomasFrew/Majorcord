@@ -5,5 +5,7 @@
     - Majorcord.py
   os:
     - windows
+    - osx
+    - linux
   install:
     - pip install -r requirements.txt

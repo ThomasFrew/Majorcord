@@ -1,4 +1,4 @@
-# Majorcord [![CodeFactor](https://www.codefactor.io/repository/github/thomasfrew/majorcord/badge/master)](https://www.codefactor.io/repository/github/thomasfrew/majorcord/overview/maste
+# Majorcord [![CodeFactor](https://www.codefactor.io/repository/github/thomasfrew/majorcord/badge/master)](https://www.codefactor.io/repository/github/thomasfrew/majorcord/overview/master)
 [Majorcord](https://github.com/ThomasFrew/Majorcord) is an open-source messaging platform inspired by a love for [Discord](https://discordapp.com/) and sheet music, hence the pun! Built using [Python 3.7](https://www.python.org/downloads/release/python-370/), Majorcord allows an infinite number of users to communicate freely on a shared plain text (.txt) file. If you have the time, feel free to download and test it on your network [here](https://github.com/ThomasFrew/Majorcord/releases)!
 
 ## Installing

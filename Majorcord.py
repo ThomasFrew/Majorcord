@@ -94,8 +94,8 @@ menu_bar.add_command(label="Quit")
 
 window.config(menu=menu_bar)
 
-def str_to_class(str):
-    return getattr(sys.modules[__name__], str)
+def str_to_class(string):
+    return getattr(sys.modules[__name__], string)
     
 def request_server():
     ''' Shows all widgets related to server selection, removed all widgets

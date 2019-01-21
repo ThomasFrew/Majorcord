@@ -11,7 +11,7 @@
    limitations under the License.  '''
 
 from tkinter import *
-
+import sys
 
 class ServerAttributes:
     ''' A base class which describes every server's attributes. This includes
@@ -94,7 +94,9 @@ menu_bar.add_command(label="Quit")
 
 window.config(menu=menu_bar)
 
-
+def str_to_class(str):
+    return getattr(sys.modules[__name__], str)
+    
 def request_server():
     ''' Shows all widgets related to server selection, removed all widgets
     which are not, and updates menu button states accordingly.
@@ -111,9 +113,9 @@ def request_server():
     license_button.grid(row=2, column=6, padx=5, pady=5)
 
     for i in enter_username_widgets:
-        eval(i).grid_forget()
+        str_to_class(i).grid_forget()
     for i in write_messages_widgets:
-        eval(i).grid_forget()
+        str_to_class(i).grid_forget()
 
     settings_menu.entryconfigure("Change Server", state=NORMAL)
     settings_menu.entryconfigure("Change Username", state=DISABLED)
@@ -164,9 +166,9 @@ def request_username():
     username_button.grid(row=2, column=5, padx=5, pady=5)
 
     for i in request_server_widgets:
-        eval(i).grid_forget()
+        str_to_class(i).grid_forget()
     for i in write_messages_widgets:
-        eval(i).grid_forget()
+        str_to_class(i).grid_forget()
 
     settings_menu.entryconfigure("Change Server", state=NORMAL)
     settings_menu.entryconfigure("Change Username", state=NORMAL)
@@ -218,9 +220,9 @@ def write_messages():
     message_button.grid(row=2, column=5, padx=5, pady=5)
 
     for i in request_server_widgets:
-        eval(i).grid_forget()
+        str_to_class(i).grid_forget()
     for i in enter_username_widgets:
-        eval(i).grid_forget()
+        str_to_class(i).grid_forget()
 
     settings_menu.entryconfigure("Change Server", state=NORMAL)
     settings_menu.entryconfigure("Change Username", state=NORMAL)
